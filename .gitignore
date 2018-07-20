@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+__pycache__
+bvlc-alexnet.npy
+train.p
+feature_extraction_solution.py
+.vscode
