@@ -54,9 +54,9 @@ def eval_model(X_data,y_data):
     total_loss =0
     for offset in range(0,num_examples,BATCH_SIZE):
 	    batch_feature, batch_label = X_data[offset:offset+BATCH_SIZE], y_data[offset:offset+BATCH_SIZE]
-	    sess.run([loss,accuracy], feed_dict = {x: batch_feature, y: batch_label})
-	    total_loss += loss*batch_feature.shape[0]
-	    total_accuracy += accuracy*batch_feature.shape[0]
+	   l,accu= sess.run([loss,accuracy], feed_dict = {x: batch_feature, y: batch_label})
+	    total_loss += l*batch_feature.shape[0]
+	    total_acc += accu*batch_feature.shape[0]
 	    
     return total_accuracy/num_examples, total_loss/num_examples 	    
 
