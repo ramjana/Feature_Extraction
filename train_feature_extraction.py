@@ -77,8 +77,7 @@ with tf.Session() as sess:
 
 	    print("Epoch",epoch_itr+1)
 	    print("Time: %.3f seconds" %(time.time() - t0))
-	    print("Validation Accuracy=",test_acc)
+	    print("Validation Accuracy=",test_accu)
 	    print("Validation loss    =", test_loss)
 	    print("")
 
-# TODO: Train and evaluate the feature extraction model.
